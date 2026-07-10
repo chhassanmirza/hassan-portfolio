@@ -1,8 +1,5 @@
-# Hassan Ali — Amazon Portfolio
+# Hassan Ali Portfolio — Milestone 3
 
-Component-based Next.js portfolio. Deploys automatically to Vercel from the `main` branch.
+Premium component-based Next.js portfolio for an Amazon Brand & PPC Manager.
 
-## Local commands
-- `npm install`
-- `npm run dev`
-- `npm run build`
+This milestone introduces the redesigned Services section with six Amazon-specific capabilities, responsive layouts, and hover interactions.

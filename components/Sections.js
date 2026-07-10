@@ -32,7 +32,34 @@ export function About(){
     <div className="about-stats-grid">{stats.map((s,i)=><Reveal key={s[1]} className="about-stat-card" delay={i*70}><strong>{s[0]}</strong><h3>{s[1]}</h3><p>{s[2]}</p><span>0{i+1}</span></Reveal>)}</div>
   </section>
 }
-export function Services(){return <section className="section dark-section" id="services"><Reveal className="section-head center"><p className="section-label">Services</p><h2>Everything your Amazon<br/><em>brand needs to scale.</em></h2><p className="lead narrow">From strategy to execution and ongoing improvement, I manage the work that directly influences profitable growth.</p></Reveal><div className="service-grid">{services.map((s,i)=><Reveal key={s[0]} className="service-card" delay={i*65}><div className="service-icon"><Icon type={['chart','layers','search','pulse','rocket','globe'][i]}/></div><span className="card-number">0{i+1}</span><h3>{s[0]}</h3><p>{s[1]}</p><div className="card-arrow">↗</div></Reveal>)}</div></section>}
+export function Services(){
+  const icons=['chart','layers','search','pulse','rocket','globe'];
+  const details=[
+    ['Sponsored Products','Sponsored Brands','Sponsored Display'],
+    ['Catalog health','Inventory planning','Daily operations'],
+    ['Keyword mapping','Copy optimization','Indexing checks'],
+    ['Weekly reporting','Profitability views','Action plans'],
+    ['Launch sequencing','Ranking strategy','Controlled scaling'],
+    ['Amazon.com','Amazon.co.uk','Localized strategy']
+  ];
+  return <section className="section services-premium" id="services">
+    <div className="services-orb services-orb-one"/><div className="services-orb services-orb-two"/>
+    <div className="services-topline"><Reveal><p className="section-label">Services</p></Reveal><Reveal delay={80}><span>02 — CAPABILITIES</span></Reveal></div>
+    <div className="services-intro">
+      <Reveal><h2>Strategy, execution<br/><em>and ownership.</em></h2></Reveal>
+      <Reveal delay={110} className="services-intro-copy"><p>I manage the parts of an Amazon account that directly influence growth—from campaign structure and listing conversion to reporting and commercial decision-making.</p><a href="#contact">Discuss your account <span>↗</span></a></Reveal>
+    </div>
+    <div className="services-showcase">
+      {services.map((s,i)=><Reveal key={s[0]} className={`service-premium-card ${i===0?'service-featured':''}`} delay={i*70}>
+        <div className="service-card-top"><span>0{i+1}</span><div className="service-premium-icon"><Icon type={icons[i]}/></div></div>
+        <div className="service-card-copy"><small>{i===0?'CORE SERVICE':'SPECIALIZED SUPPORT'}</small><h3>{s[0]}</h3><p>{s[1]}</p></div>
+        <div className="service-detail-list">{details[i].map((d,j)=><span key={d}><i>0{j+1}</i>{d}</span>)}</div>
+        <a href="#contact" className="service-card-link">Explore service <b>↗</b></a>
+      </Reveal>)}
+    </div>
+    <Reveal className="services-note"><span>BUILT AROUND YOUR ACCOUNT</span><p>No recycled template. The strategy is shaped by your product, margins, stage of growth and marketplace competition.</p><i>Amazon US · Amazon UK · FBA Brands</i></Reveal>
+  </section>
+}
 export function Tools(){return <section className="automation-band" id="tools"><div className="automation-copy"><Reveal><p className="section-label">Daily Tool Stack</p><h2>Amazon growth,<br/><em>powered by data.</em></h2><p>I work inside the platforms that reveal what customers search, where ads leak spend and how organic visibility is changing.</p></Reveal></div><Reveal className="tool-cloud" delay={100}>{tools.map((t,i)=><span key={t} style={{'--i':i}}>{t}</span>)}</Reveal></section>}
 export function Offer(){return <section className="section offer-section" id="offer"><Reveal className="section-head center"><p className="section-label">What I Have To Offer</p><h2>A clear path from audit<br/><em>to profitable scale.</em></h2></Reveal><div className="offer-list">{offers.map((o,i)=><Reveal key={o[0]} className="offer-row" delay={i*70}><span className="offer-number">{o[0]}</span><h3>{o[1]}</h3><p>{o[2]}</p><span className="offer-line"/></Reveal>)}</div></section>}
 export function Cases(){return <section className="section case-section" id="cases"><Reveal className="section-head split"><div><p className="section-label">Selected Work</p><h2>Proof in<br/><em>the numbers.</em></h2></div><p className="lead">Real outcomes from brands where strategy, execution and disciplined optimization worked together.</p></Reveal><div className="case-grid">{cases.map((c,i)=><Reveal key={c.title} className="case-card" delay={i*70}><div className="case-top"><span>{c.brand}</span><b>0{i+1}</b></div><h3>{c.title}</h3><div className="metrics">{c.metrics.map(m=><div key={m[0]}><span>{m[0]}</span><strong>{m[1]}</strong></div>)}</div><div className="case-footer"><span>{c.tag}</span><i>View outcome ↗</i></div></Reveal>)}</div></section>}
