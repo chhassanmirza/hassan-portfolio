@@ -110,6 +110,8 @@ function ParticleCanvas() {
 export default function Home() {
   const [typed, setTyped] = useState('');
   const [menu, setMenu] = useState(false);
+  const [navScrolled, setNavScrolled] = useState(false);
+  const heroRef = useRef(null);
   const words = ['AMAZON PPC EXPERT', 'AMAZON ACCOUNT MANAGER', 'AMAZON GROWTH STRATEGIST'];
 
   useEffect(() => {
@@ -138,6 +140,32 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+
+  useEffect(() => {
+    const onScroll = () => setNavScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const onMove = (event) => {
+      const rect = hero.getBoundingClientRect();
+      const x = Math.max(0, Math.min(rect.width, event.clientX - rect.left));
+      const y = Math.max(0, Math.min(rect.height, event.clientY - rect.top));
+      const nx = x / rect.width - 0.5;
+      const ny = y / rect.height - 0.5;
+      hero.style.setProperty('--mouse-x', `${x}px`);
+      hero.style.setProperty('--mouse-y', `${y}px`);
+      hero.style.setProperty('--parallax-x', `${nx * 16}px`);
+      hero.style.setProperty('--parallax-y', `${ny * 10}px`);
+    };
+    hero.addEventListener('mousemove', onMove);
+    return () => hero.removeEventListener('mousemove', onMove);
+  }, []);
+
   useEffect(() => {
     const io = new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('is-visible')), { threshold: .12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
@@ -147,7 +175,7 @@ export default function Home() {
   return (
     <main>
       <div className="noise" />
-      <nav className="nav">
+      <nav className={`nav ${navScrolled ? 'scrolled' : ''}`}>
         <a href="#top" className="brand"><span>HA</span> PORTFOLIO</a>
         <button className="menu-button" onClick={() => setMenu(!menu)} aria-label="Toggle menu"><span/><span/></button>
         <div className={`nav-links ${menu ? 'open' : ''}`}>
@@ -156,7 +184,8 @@ export default function Home() {
         <a className="nav-cta" href="#contact">Hire Me <span>↗</span></a>
       </nav>
 
-      <section className="hero" id="top">
+      <section className="hero" id="top" ref={heroRef}>
+        <div className="cursor-aura" aria-hidden="true" />
         <div className="hero-grid" />
         <div className="hero-copy">
           <div className="hero-sequence seq-1 eyebrow"><span/> Amazon Brand & PPC Manager</div>
