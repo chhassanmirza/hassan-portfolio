@@ -1,7 +1,8 @@
 # Hassan Ali — Amazon Portfolio
 
-Phase 2 introduces the premium animated hero and complete responsive portfolio shell.
+Component-based Next.js portfolio. Deploys automatically to Vercel from the `main` branch.
 
-## Deploy
-
-Commit the project files to the root of the GitHub repository. Vercel detects Next.js and redeploys automatically.
+## Local commands
+- `npm install`
+- `npm run dev`
+- `npm run build`

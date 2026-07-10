@@ -30,3 +30,19 @@
 @keyframes glowPulse{0%,100%{opacity:.72;transform:scale(.96)}50%{opacity:1;transform:scale(1.06)}}
 @keyframes statusPulse{0%{box-shadow:0 0 0 0 rgba(113,208,138,.48)}70%{box-shadow:0 0 0 8px rgba(113,208,138,0)}100%{box-shadow:0 0 0 0 rgba(113,208,138,0)}}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.hero-visual{transform:none!important}.cursor-aura{display:none}}
+
+/* Milestone 1 component refinements */
+.hero-title-fixed{display:flex;flex-direction:column;min-height:2.05em;max-width:900px}
+.hero-title-fixed>span{display:block;white-space:nowrap}
+.hero-title-fixed .typed-line{font-size:.72em;line-height:1.02;min-height:1.05em;color:var(--paper)}
+.hero-title-fixed i{color:var(--gold);font-style:normal;animation:blink .8s steps(1) infinite}
+.portrait-parallax{position:absolute;inset:0;z-index:4;transform:translate3d(var(--mx,0),var(--my,0),0);transition:transform .22s ease-out;display:flex;align-items:flex-end;justify-content:center}
+.portrait-parallax .portrait{position:relative;inset:auto;height:88%;width:auto;max-width:88%;object-fit:contain;object-position:bottom center;animation:portraitFloat 6s ease-in-out infinite}
+.cursor-halo{position:absolute;inset:0;z-index:1;background:radial-gradient(circle 180px at var(--gx,50%) var(--gy,45%),rgba(217,179,108,.16),transparent 72%);pointer-events:none;transition:background .15s linear}
+.nav.nav-scrolled{background:rgba(7,9,8,.82);backdrop-filter:blur(18px);box-shadow:0 12px 40px rgba(0,0,0,.24)}
+.magnetic{transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease}.magnetic:hover{transform:translateY(-3px)}
+@keyframes portraitFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes blink{50%{opacity:0}}
+@media(max-width:1100px){.hero-title-fixed>span{white-space:normal}.hero-title-fixed{min-height:2.35em}.hero-title-fixed .typed-line{font-size:.65em}}
+@media(max-width:700px){.hero-title-fixed{min-height:2.6em}.hero-title-fixed .typed-line{font-size:.58em;line-height:1.1}.portrait-parallax .portrait{height:92%;max-width:96%}}
+@media(prefers-reduced-motion:reduce){.portrait-parallax .portrait{animation:none}.hero-title-fixed i{animation:none}}
