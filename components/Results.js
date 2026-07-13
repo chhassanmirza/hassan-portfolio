@@ -5,10 +5,10 @@ import Reveal from './Reveal';
 const metrics=[
   {value:1,prefix:'$',suffix:'M+',label:'Managed Ad Sales',note:'Across growth-focused Amazon accounts'},
   {value:5,suffix:'+',label:'Years Experience',note:'PPC, brand management and operations'},
-  {value:13,suffix:'+',label:'Upwork Projects',note:'Completed with dependable delivery'},
+  {value:25,suffix:'+',label:'Projects Completed',note:'Across Amazon PPC, brand management and account operations'},
   {value:5,suffix:'.0',label:'Client Rating',note:'Built through clarity and accountability'},
   {display:'US · UK',label:'Marketplace Expertise',note:'Localized strategy for each market'},
-  {value:4,suffix:'+',label:'Brands Managed',note:'Concurrent account ownership and reporting'}
+  {value:50,suffix:'+',label:'Brands Managed',note:'Supported across multiple Amazon categories and marketplaces'}
 ];
 
 const specialties=['Amazon PPC','Brand Management','Listing Optimization','Product Launches','Catalog Management','Profitability Reporting'];
