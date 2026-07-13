@@ -12,7 +12,7 @@ const metrics=[
 ];
 
 const specialties=['Amazon PPC','Brand Management','Listing Optimization','Product Launches','Catalog Management','Profitability Reporting'];
-const process=[
+const workflowSteps=[
   ['01','Audit','Find the leaks, missed opportunities and commercial constraints.'],
   ['02','Strategy','Create a clear plan around profitability, ranking and growth.'],
   ['03','Execution','Implement campaigns, listing improvements and account actions.'],
@@ -71,8 +71,8 @@ export default function Results(){
     <div className="results-shell results-statement-wrap">
       <Reveal className="results-statement"><span>BUSINESS PRINCIPLE</span><blockquote>Your Amazon business does not need more ad spend.<em> It needs better decisions.</em></blockquote></Reveal>
       <div className="results-process">
-        {process.map(([n,t,d],i)=><Reveal key={t} className="results-process-step" delay={i*70}>
-          <span>{n}</span><div><h3>{t}</h3><p>{d}</p></div>{i<process.length-1&&<i>→</i>}
+        {workflowSteps.map(([n,t,d],i)=><Reveal key={t} className="results-process-step" delay={i*70}>
+          <span>{n}</span><div><h3>{t}</h3><p>{d}</p></div>{i<workflowSteps.length-1&&<i>→</i>}
         </Reveal>)}
       </div>
     </div>
