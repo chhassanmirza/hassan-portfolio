@@ -4,32 +4,49 @@ const offers=[['01','Account Audit','A structured review of listings, advertisin
 const cases=[{brand:'LUXETAIL · AMAZON US',title:'Pet Supplies — Ranking Recovery & TACoS Control',metrics:[['Revenue growth','+70%'],['TACoS achieved','≤15%'],['Organic sales ratio','>40%'],['Wasted spend reduced','−20%']],tag:'Ranking Recovery'},{brand:'MAGNILAY · AMAZON US',title:'Yoga Mat Bag — ACoS Turnaround & ROAS Growth',metrics:[['ACoS reduction','54% → 33%'],['ROAS improvement','+40%'],['Organic rank lift','+35%']],tag:'Account Turnaround'},{brand:'KITCHENTHINKER · AMAZON US',title:'Dough Whisk — Launch to Sustained Profitability',metrics:[['Profits generated','$40K+'],['ACoS sustained','28%–32%'],['TACoS sustained','10%–15%'],['Main keyword rank','Top 5']],tag:'Launched from Scratch'},{brand:"LINNIE'S STICKERS · AMAZON US",title:'Vinyl Stickers — PPC Revamp & Consistent Scaling',metrics:[['ACoS sustained','35%–40%'],['TACoS sustained','15%–20%'],['Revenue growth MoM','8%–10%']],tag:'PPC Strategy Revamp'}];
 const tools=['Helium 10','DataDive','SellerBoard','Jungle Scout','Keepa','Amazon Ads Console','Brand Analytics','Search Query Performance','Amazon Attribution','DSP','Bulk Sheets','Excel & Google Sheets'];
 export function About(){
-  const stats=[
-    ['5+','Years of experience','Hands-on account and advertising management'],
-    ['$1M+','Managed ad sales','Across US and UK marketplaces'],
-    ['13+','Upwork contracts','Completed with clear communication'],
-    ['5.0','Average rating','Built through dependable delivery']
+  const focus=[
+    ['01','Profitability first','Every decision is evaluated against sales, margin, conversion and long-term account health.'],
+    ['02','Full-account thinking','Advertising, listings, pricing, inventory and organic rank are managed as one connected system.'],
+    ['03','Clear ownership','You know what changed, why it changed and what action comes next.']
   ];
-  const capabilities=['PPC strategy','Brand management','Listing optimization','Product launches','Profitability reporting','US & UK marketplaces'];
-  return <section className="section about about-premium" id="about">
-    <div className="about-kicker-row"><Reveal><p className="section-label">About Hassan</p></Reveal><Reveal delay={80}><span className="about-index">01 — PROFILE</span></Reveal></div>
-    <div className="about-hero-grid">
-      <Reveal className="about-heading"><h2>More than an ad manager.<br/><em>A growth partner.</em></h2></Reveal>
-      <Reveal className="about-intro-copy" delay={100}><p className="lead">I help Amazon brands turn scattered advertising data into a clear growth plan—then take ownership of the execution.</p><p>With <strong>5+ years of experience</strong>, I combine PPC, listing optimization, account management and profitability reporting to support sustainable growth.</p></Reveal>
+  return <section className="section consultant-about" id="about">
+    <div className="consultant-about-top">
+      <Reveal><p className="section-label">Your Growth Partner</p></Reveal>
+      <Reveal delay={80}><span>02 — APPROACH</span></Reveal>
     </div>
-    <div className="about-showcase">
-      <Reveal className="about-portrait-panel">
-        <div className="about-photo-glow"/><div className="about-photo-grid"/>
+
+    <div className="consultant-about-heading">
+      <Reveal><h2>More than campaign management.<br/><em>I help build profitable Amazon businesses.</em></h2></Reveal>
+      <Reveal delay={100}><p>Most Amazon accounts do not struggle because of one campaign. They struggle because advertising, listing quality, pricing, inventory and profitability are not managed together.</p></Reveal>
+    </div>
+
+    <div className="consultant-about-grid">
+      <Reveal className="consultant-about-visual">
+        <div className="consultant-about-glow"/><div className="consultant-about-gridlines"/>
         <img src="/photo.png" alt="Hassan Ali, Amazon Brand and PPC Manager"/>
-        <div className="about-photo-caption"><span>HASSAN ALI</span><small>Amazon Brand & PPC Manager</small></div>
-        <a className="about-play" href="#contact" aria-label="Contact Hassan"><b>↗</b><span>Let's work<br/>together</span></a>
+        <div className="consultant-about-name"><strong>Hassan Ali</strong><span>Amazon Brand & PPC Manager</span></div>
       </Reveal>
-      <div className="about-details">
-        <Reveal className="about-story" delay={100}><span className="eyebrow">HOW I WORK</span><p>I look beyond campaign-level ACoS. I connect advertising performance with conversion, organic rank, inventory, pricing and contribution margin—so decisions improve the whole account, not just one dashboard.</p><p>Clients receive structured reporting, direct communication and a clear explanation of what changed, why it changed and what happens next.</p></Reveal>
-        <Reveal className="capability-list" delay={160}>{capabilities.map((c,i)=><div key={c}><span>0{i+1}</span><p>{c}</p><i>↗</i></div>)}</Reveal>
+
+      <div className="consultant-about-copy">
+        <Reveal className="consultant-about-story" delay={90}>
+          <span>HOW I WORK</span>
+          <p>I work as an extension of your business—not as someone who only changes bids. I connect PPC performance with conversion, organic rank, inventory, pricing and contribution margin so every action supports the wider account.</p>
+          <p>My focus is sustainable growth, disciplined execution and transparent communication. Clients receive a clear view of performance, the decisions being made and the commercial reason behind each next step.</p>
+        </Reveal>
+
+        <div className="consultant-focus-list">
+          {focus.map((item,i)=><Reveal key={item[1]} className="consultant-focus-row" delay={130+i*65}>
+            <span>{item[0]}</span><div><h3>{item[1]}</h3><p>{item[2]}</p></div><i>↗</i>
+          </Reveal>)}
+        </div>
       </div>
     </div>
-    <div className="about-stats-grid">{stats.map((s,i)=><Reveal key={s[1]} className="about-stat-card" delay={i*70}><strong>{s[0]}</strong><h3>{s[1]}</h3><p>{s[2]}</p><span>0{i+1}</span></Reveal>)}</div>
+
+    <Reveal className="consultant-about-cta">
+      <span>THE OUTCOME</span>
+      <p>Better decisions, stronger account control and growth that is built to last.</p>
+      <a href="#cases">See the results <b>↗</b></a>
+    </Reveal>
   </section>
 }
 export function Services(){
@@ -58,6 +75,24 @@ export function Services(){
       </Reveal>)}
     </div>
     <Reveal className="services-note"><span>BUILT AROUND YOUR ACCOUNT</span><p>No recycled template. The strategy is shaped by your product, margins, stage of growth and marketplace competition.</p><i>Amazon US · Amazon UK · FBA Brands</i></Reveal>
+  </section>
+}
+export function Process(){
+  const steps=[
+    ['01','Audit','Understand performance, profitability, listings, rankings and operational constraints.'],
+    ['02','Prioritize','Separate quick wins from structural issues and define the highest-impact actions.'],
+    ['03','Execute','Implement campaign, listing, catalog and account improvements with clear ownership.'],
+    ['04','Optimize','Review results, isolate what is working and remove spend or activity that is not.'],
+    ['05','Scale','Increase investment where profitable growth and operational readiness support it.']
+  ];
+  return <section className="section process-section" id="process">
+    <Reveal className="section-head split">
+      <div><p className="section-label">How I Work</p><h2>A disciplined path<br/><em>from data to growth.</em></h2></div>
+      <p className="lead">A clear operating rhythm keeps strategy connected to execution and makes every decision easier to understand.</p>
+    </Reveal>
+    <div className="process-grid">{steps.map((s,i)=><Reveal key={s[1]} className="process-card" delay={i*70}>
+      <span>{s[0]}</span><h3>{s[1]}</h3><p>{s[2]}</p>{i<steps.length-1&&<i>→</i>}
+    </Reveal>)}</div>
   </section>
 }
 export function Tools(){return <section className="automation-band" id="tools"><div className="automation-copy"><Reveal><p className="section-label">Daily Tool Stack</p><h2>Amazon growth,<br/><em>powered by data.</em></h2><p>I work inside the platforms that reveal what customers search, where ads leak spend and how organic visibility is changing.</p></Reveal></div><Reveal className="tool-cloud" delay={100}>{tools.map((t,i)=><span key={t} style={{'--i':i}}>{t}</span>)}</Reveal></section>}
