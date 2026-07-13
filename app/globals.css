@@ -572,3 +572,19 @@
     gap:12px;
   }
 }
+
+
+/* Fix Services decorative layers taking up layout space */
+.services-sales-grid,
+.services-sales-glow{
+  position:absolute !important;
+  z-index:0 !important;
+}
+
+.services-sales-topline,
+.services-sales-intro,
+.services-sales-layout,
+.services-sales-footer{
+  position:relative;
+  z-index:2;
+}
