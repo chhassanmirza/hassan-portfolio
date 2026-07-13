@@ -50,31 +50,110 @@ export function About(){
   </section>
 }
 export function Services(){
-  const icons=['chart','layers','search','pulse','rocket','globe'];
-  const details=[
-    ['Sponsored Products','Sponsored Brands','Sponsored Display'],
-    ['Catalog health','Inventory planning','Daily operations'],
-    ['Keyword mapping','Copy optimization','Indexing checks'],
-    ['Weekly reporting','Profitability views','Action plans'],
-    ['Launch sequencing','Ranking strategy','Controlled scaling'],
-    ['Amazon.com','Amazon.co.uk','Localized strategy']
+  const serviceCards=[
+    {
+      number:'01',
+      type:'CORE SERVICE',
+      title:'Amazon PPC Management',
+      outcome:'Scale profitably while reducing wasted ad spend.',
+      description:'I build advertising systems that improve profitability, strengthen keyword visibility and support long-term account growth—not just short-term campaign metrics.',
+      icon:'chart',
+      featured:true,
+      capabilities:['Campaign architecture','Sponsored Products','Sponsored Brands','Sponsored Display','Bid strategy','Search-term harvesting','Negative targeting','Budget allocation']
+    },
+    {
+      number:'02',
+      type:'FULL ACCOUNT OWNERSHIP',
+      title:'Brand Management',
+      outcome:'Operate your Amazon business like an in-house manager.',
+      description:'Advertising works best when pricing, inventory, catalog health and commercial decisions are managed together.',
+      icon:'layers',
+      capabilities:['Inventory planning','Pricing strategy','Promotions','Catalog health','Business reporting']
+    },
+    {
+      number:'03',
+      type:'CONVERSION GROWTH',
+      title:'SEO & Listing Optimization',
+      outcome:'Increase conversion before increasing ad spend.',
+      description:'Stronger listings reduce acquisition costs, improve organic visibility and convert more of the traffic you already pay for.',
+      icon:'search',
+      capabilities:['Keyword research','Listing SEO','Title and bullets','A+ content','Conversion optimization']
+    },
+    {
+      number:'04',
+      type:'DECISION SUPPORT',
+      title:'Analytics & Reporting',
+      outcome:'Every important decision backed by data.',
+      description:'Clear reporting designed for brand owners—focused on profitability, trends, risks and the actions that should happen next.',
+      icon:'pulse',
+      capabilities:['Weekly reporting','TACoS analysis','Profit analysis','Search-term insights','Executive dashboards']
+    },
+    {
+      number:'05',
+      type:'MARKET ENTRY',
+      title:'Product Launches',
+      outcome:'Launch products with a structured ranking plan.',
+      description:'Each launch follows a disciplined roadmap for visibility, reviews, keyword momentum and controlled advertising investment.',
+      icon:'rocket',
+      capabilities:['Launch roadmap','Ranking campaigns','Vine planning','Review strategy','Competitor analysis']
+    }
   ];
-  return <section className="section services-premium" id="services">
-    <div className="services-orb services-orb-one"/><div className="services-orb services-orb-two"/>
-    <div className="services-topline"><Reveal><p className="section-label">Services</p></Reveal><Reveal delay={80}><span>02 — CAPABILITIES</span></Reveal></div>
-    <div className="services-intro">
-      <Reveal><h2>Strategy, execution<br/><em>and ownership.</em></h2></Reveal>
-      <Reveal delay={110} className="services-intro-copy"><p>I manage the parts of an Amazon account that directly influence growth—from campaign structure and listing conversion to reporting and commercial decision-making.</p><a href="#contact">Discuss your account <span>↗</span></a></Reveal>
+
+  return <section className="section services-sales" id="services">
+    <div className="services-sales-grid"/>
+    <div className="services-sales-glow services-sales-glow-one"/>
+    <div className="services-sales-glow services-sales-glow-two"/>
+
+    <div className="services-sales-topline">
+      <Reveal><p className="section-label">Services</p></Reveal>
+      <Reveal delay={80}><span>03 — CAPABILITIES</span></Reveal>
     </div>
-    <div className="services-showcase">
-      {services.map((s,i)=><Reveal key={s[0]} className={`service-premium-card ${i===0?'service-featured':''}`} delay={i*70}>
-        <div className="service-card-top"><span>0{i+1}</span><div className="service-premium-icon"><Icon type={icons[i]}/></div></div>
-        <div className="service-card-copy"><small>{i===0?'CORE SERVICE':'SPECIALIZED SUPPORT'}</small><h3>{s[0]}</h3><p>{s[1]}</p></div>
-        <div className="service-detail-list">{details[i].map((d,j)=><span key={d}><i>0{j+1}</i>{d}</span>)}</div>
-        <a href="#contact" className="service-card-link">Explore service <b>↗</b></a>
+
+    <div className="services-sales-intro">
+      <Reveal>
+        <h2>Strategy, execution<br/><em>and ownership.</em></h2>
+      </Reveal>
+      <Reveal delay={110} className="services-sales-summary">
+        <p>I manage the parts of an Amazon business that directly influence growth—from campaign structure and listing conversion to reporting and commercial decision-making.</p>
+        <a href="#contact">Discuss your account <span>↗</span></a>
+      </Reveal>
+    </div>
+
+    <div className="services-sales-layout">
+      {serviceCards.map((service,index)=><Reveal
+        key={service.title}
+        className={`service-sales-card ${service.featured?'service-sales-featured':''}`}
+        delay={index*70}
+      >
+        <div className="service-sales-card-top">
+          <span>{service.number}</span>
+          <div className="service-sales-icon"><Icon type={service.icon}/></div>
+        </div>
+
+        <div className="service-sales-copy">
+          <small>{service.type}</small>
+          <h3>{service.title}</h3>
+          <h4>{service.outcome}</h4>
+          <p>{service.description}</p>
+        </div>
+
+        <div className="service-sales-capabilities">
+          {service.capabilities.map((capability,capIndex)=><span key={capability}>
+            <i>0{capIndex+1}</i>{capability}
+          </span>)}
+        </div>
+
+        <a className="service-sales-link" href="#contact">
+          Explore service <b>↗</b>
+        </a>
       </Reveal>)}
     </div>
-    <Reveal className="services-note"><span>BUILT AROUND YOUR ACCOUNT</span><p>No recycled template. The strategy is shaped by your product, margins, stage of growth and marketplace competition.</p><i>Amazon US · Amazon UK · FBA Brands</i></Reveal>
+
+    <Reveal className="services-sales-footer">
+      <span>BUILT AROUND YOUR BUSINESS</span>
+      <p>No recycled template. The strategy is shaped by your product, margins, stage of growth, inventory position and marketplace competition.</p>
+      <a href="#cases">See client outcomes <b>↗</b></a>
+    </Reveal>
   </section>
 }
 export function Process(){
