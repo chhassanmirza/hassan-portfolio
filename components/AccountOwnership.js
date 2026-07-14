@@ -10,8 +10,11 @@ const ownershipAreas = [
     summary: 'Building scalable advertising systems focused on profitable growth rather than increasing spend alone.',
     icon: '↗',
     deliverables: ['Campaign structure', 'Keyword expansion', 'Budget allocation', 'TACoS optimization'],
-    why: 'Advertising should improve the wider business. Campaign decisions are connected to profitability, ranking, conversion and inventory.',
-    outcome: 'Cleaner account structure, less wasted spend and more controlled growth.',
+    why: 'Advertising should increase profitable growth, not simply sales. Every campaign decision is connected to contribution margin, keyword visibility, conversion rate and long-term account health.',
+    outcome: 'Campaign strategy, account structure, keyword expansion, bid management and budget allocation.
+
+CLIENT OUTCOME
+A more efficient advertising system that scales profitably while reducing wasted spend.',
   },
   {
     number: '02',
@@ -19,8 +22,11 @@ const ownershipAreas = [
     summary: 'Managing the commercial side of Amazon so every decision supports long-term brand growth.',
     icon: '◎',
     deliverables: ['Pricing strategy', 'Competitor analysis', 'Brand positioning', 'Marketplace expansion'],
-    why: 'Growth becomes more predictable when advertising, pricing, promotions and market positioning follow one commercial plan.',
-    outcome: 'Stronger account control and clearer priorities across the brand.',
+    why: 'Strong Amazon brands are built through consistent commercial decisions across advertising, pricing, inventory and catalog management.',
+    outcome: 'Commercial planning, pricing strategy, marketplace positioning and ongoing account ownership.
+
+CLIENT OUTCOME
+Better business decisions, stronger account control and sustainable long-term growth.',
   },
   {
     number: '03',
@@ -28,8 +34,11 @@ const ownershipAreas = [
     summary: 'Improving visibility and conversion with search-focused and customer-focused listing improvements.',
     icon: '◇',
     deliverables: ['SEO optimization', 'Image strategy', 'A+ content', 'Conversion improvements'],
-    why: 'Higher conversion makes every paid click more valuable and strengthens organic performance over time.',
-    outcome: 'Better conversion, stronger indexing and more efficient advertising.',
+    why: 'Higher conversion improves every marketing effort. Better listings generate more revenue from the same traffic.',
+    outcome: 'Keyword research, listing SEO, image strategy, A+ Content and conversion optimization.
+
+CLIENT OUTCOME
+Improved indexing, stronger organic rankings and higher conversion rates.',
   },
   {
     number: '04',
@@ -37,8 +46,11 @@ const ownershipAreas = [
     summary: 'Launching products with structured execution that builds visibility, rankings and profitable momentum.',
     icon: '△',
     deliverables: ['Launch planning', 'PPC rollout', 'Ranking strategy', 'Performance scaling'],
-    why: 'A launch needs coordinated listing readiness, campaign sequencing, review planning and inventory support.',
-    outcome: 'Faster market entry with clearer ranking and profitability milestones.',
+    why: 'Successful launches are built through structured execution rather than aggressive spending.',
+    outcome: 'Launch planning, campaign rollout, ranking strategy and controlled performance scaling.
+
+CLIENT OUTCOME
+Faster visibility, stronger keyword rankings and profitable growth from the beginning.',
   },
   {
     number: '05',
@@ -46,8 +58,11 @@ const ownershipAreas = [
     summary: 'Preventing lost sales by aligning inventory planning with advertising performance and seasonality.',
     icon: '▦',
     deliverables: ['Restock planning', 'Stock monitoring', 'Seasonal forecasting', 'Demand planning'],
-    why: 'Advertising cannot scale safely when inventory decisions are disconnected from demand and sales velocity.',
-    outcome: 'Lower stock risk and better readiness for promotions and growth periods.',
+    why: 'Inventory planning protects revenue and keeps advertising performing consistently during periods of growth.',
+    outcome: 'Demand forecasting, inventory monitoring, restock planning and seasonal preparation.
+
+CLIENT OUTCOME
+Lower stock risk, healthier inventory levels and uninterrupted sales momentum.',
   },
   {
     number: '06',
@@ -55,8 +70,11 @@ const ownershipAreas = [
     summary: 'Turning performance data into practical business decisions through clear reporting and actionable insights.',
     icon: '⌁',
     deliverables: ['Weekly reporting', 'KPI dashboards', 'Opportunity analysis', 'Growth roadmaps'],
-    why: 'Reports should explain what changed, why it matters and what action should happen next.',
-    outcome: 'Faster decisions, clearer accountability and stronger commercial visibility.',
+    why: 'Business data only creates value when it leads to better commercial decisions.',
+    outcome: 'Performance reporting, KPI analysis, opportunity identification and strategic planning.
+
+CLIENT OUTCOME
+Greater visibility, faster decisions and a clear roadmap for continued account growth.',
   },
 ];
 
@@ -153,7 +171,7 @@ export default function AccountOwnership() {
                     <p>{area.why}</p>
                   </div>
                   <div>
-                    <span>TYPICAL OUTCOME</span>
+                    <span>MY RESPONSIBILITY</span>
                     <p>{area.outcome}</p>
                   </div>
                 </div>
