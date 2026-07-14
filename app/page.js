@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Results from '../components/Results';
 import FeaturedCaseStudy from '../components/FeaturedCaseStudy';
+import AccountOwnership from '../components/AccountOwnership';
 import { About, Services, Cases, Testimonials, Process, Tools, Offer, Contact } from '../components/Sections';
 
 export default function Home(){
@@ -25,6 +26,7 @@ export default function Home(){
       <About/>
       <Services/>
       <FeaturedCaseStudy/>
+      <AccountOwnership/>
       <Cases/>
       <Testimonials/>
       <Process/>
