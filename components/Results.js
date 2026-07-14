@@ -55,7 +55,7 @@ export default function Results(){
       </div>
       <div className="results-heading-grid">
         <Reveal><h2>Experience is useful.<br/><em>Results build trust.</em></h2></Reveal>
-        <Reveal delay={100}><p>Brand owners and hiring managers should not have to guess what I bring to the table. These numbers represent hands-on work, commercial responsibility and consistent client delivery.</p></Reveal>
+        <Reveal delay={100}><p>I don&apos;t optimize campaigns in isolation. Every decision is guided by profitability, organic growth, inventory health and long-term brand value. That&apos;s how scalable Amazon businesses are built.</p></Reveal>
       </div>
       <div className="results-metrics">
         {metrics.map((m,i)=><Reveal key={m.label} className="result-metric-card" delay={i*65}>
