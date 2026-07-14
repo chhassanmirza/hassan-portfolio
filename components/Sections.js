@@ -5,9 +5,9 @@ const cases=[{brand:'LUXETAIL · AMAZON US',title:'Pet Supplies — Ranking Reco
 const tools=['Helium 10','DataDive','SellerBoard','Jungle Scout','Keepa','Amazon Ads Console','Brand Analytics','Search Query Performance','Amazon Attribution','DSP','Bulk Sheets','Excel & Google Sheets'];
 export function About(){
   const focus=[
-    ['01','Profitability first','Every decision is evaluated against sales, margin, conversion and long-term account health.'],
-    ['02','Full-account thinking','Advertising, listings, pricing, inventory and organic rank are managed as one connected system.'],
-    ['03','Clear ownership','You know what changed, why it changed and what action comes next.']
+    ['01','Profitability first','Every strategy starts with contribution margin, TACoS and long-term profitability instead of chasing short-term sales.'],
+    ['02','Full account ownership','From PPC and listings to inventory planning and reporting, I take responsibility for the complete growth of the account.'],
+    ['03','Data backed decisions','Every optimization is supported by performance data, customer behavior and measurable business impact.']
   ];
   return <section className="section consultant-about" id="about">
     <div className="consultant-about-top">
@@ -29,9 +29,8 @@ export function About(){
 
       <div className="consultant-about-copy">
         <Reveal className="consultant-about-story" delay={90}>
-          <span>HOW I WORK</span>
-          <p>I work as an extension of your business—not as someone who only changes bids. I connect PPC performance with conversion, organic rank, inventory, pricing and contribution margin so every action supports the wider account.</p>
-          <p>My focus is sustainable growth, disciplined execution and transparent communication. Clients receive a clear view of performance, the decisions being made and the commercial reason behind each next step.</p>
+          <span>WHAT DRIVES EVERY DECISION</span>
+          <p>I don&apos;t optimize campaigns in isolation. Every decision is guided by profitability, organic growth, inventory health and long-term brand value. That&apos;s how scalable Amazon businesses are built.</p>
         </Reveal>
 
         <div className="consultant-focus-list">
@@ -44,7 +43,7 @@ export function About(){
 
     <Reveal className="consultant-about-cta">
       <span>THE OUTCOME</span>
-      <p>Better decisions, stronger account control and growth that is built to last.</p>
+      <p>Sustainable Amazon growth is the result of consistent execution, disciplined decision-making and complete account ownership.</p>
       <a href="#cases">See the results <b>↗</b></a>
     </Reveal>
   </section>
