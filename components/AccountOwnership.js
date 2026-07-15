@@ -124,11 +124,13 @@ export default function AccountOwnership() {
                   </button>
                 </div>
 
-                <div className="ownership-expanded" aria-hidden={!isOpen}>
-                  <section><span>WHY IT MATTERS</span><p>{area.why}</p></section>
-                  <section><span>MY RESPONSIBILITY</span><DetailList items={area.responsibilities} /></section>
-                  <section><span>CLIENT OUTCOME</span><DetailList items={area.outcomes} /></section>
-                </div>
+                {isOpen && (
+                  <div className="ownership-expanded">
+                    <section><span>WHY IT MATTERS</span><p>{area.why}</p></section>
+                    <section><span>MY RESPONSIBILITY</span><DetailList items={area.responsibilities} /></section>
+                    <section><span>CLIENT OUTCOME</span><DetailList items={area.outcomes} /></section>
+                  </div>
+                )}
               </Reveal>
             );
           })}

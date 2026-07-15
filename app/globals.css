@@ -1191,3 +1191,39 @@
 .ownership-detail-list span{display:flex;align-items:center;gap:13px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07);color:#b6b2a8;font-size:9px}
 .ownership-detail-list b{color:#68665f;font-size:8px;font-weight:400}
 @media(max-width:700px){.ownership-card,.ownership-card-main{min-height:auto}.ownership-card-main{padding:24px}.ownership-card.is-open .ownership-expanded{padding:0 24px 24px}}
+
+
+/* Make Account Ownership expansion render immediately without scroll repaint */
+.ownership-cards{
+  align-items:start;
+}
+
+.ownership-card{
+  transform:none !important;
+}
+
+.ownership-card:hover,
+.ownership-card.is-open{
+  transform:none !important;
+}
+
+.ownership-expanded{
+  display:block !important;
+  max-height:none !important;
+  opacity:1 !important;
+  overflow:visible !important;
+  transform:none !important;
+  padding:0 29px 29px !important;
+  animation:ownershipDetailsIn .28s ease both;
+}
+
+@keyframes ownershipDetailsIn{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:none}
+}
+
+@media(max-width:700px){
+  .ownership-expanded{
+    padding:0 24px 24px !important;
+  }
+}
