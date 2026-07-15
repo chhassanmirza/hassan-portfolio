@@ -1227,3 +1227,22 @@
     padding:0 24px 24px !important;
   }
 }
+
+
+/* Keep ownership cards visible when the grid reflows after opening or closing */
+.ownership-cards > .reveal,
+.ownership-card.reveal{
+  opacity:1 !important;
+  transform:none !important;
+  transition:none !important;
+}
+
+.ownership-cards{
+  grid-auto-flow:row;
+  align-items:start;
+}
+
+.ownership-card{
+  visibility:visible !important;
+  contain:none !important;
+}
