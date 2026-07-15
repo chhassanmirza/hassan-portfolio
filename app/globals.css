@@ -1246,3 +1246,150 @@
   visibility:visible !important;
   contain:none !important;
 }
+
+
+/* Premium navigation refinement */
+.nav{
+  height:88px;
+  padding:0 4.2vw;
+  transition:
+    height .35s ease,
+    background .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease,
+    padding .35s ease;
+}
+
+.nav.nav-scrolled{
+  height:72px;
+  background:rgba(7,8,7,.92);
+  border-color:rgba(217,179,108,.14);
+  box-shadow:0 16px 45px rgba(0,0,0,.28);
+}
+
+.nav .brand{
+  font-size:21px;
+  letter-spacing:1.65px;
+}
+
+.nav-links{
+  gap:30px;
+}
+
+.nav-links a{
+  display:inline-flex;
+  align-items:center;
+  gap:0;
+  color:#c8c3b9;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:1.35px;
+  white-space:nowrap;
+  transition:color .25s ease;
+}
+
+.nav-links a:hover{
+  color:var(--gold2);
+}
+
+.nav-links a:after{
+  bottom:-10px;
+  height:1px;
+}
+
+.nav-featured-link{
+  color:var(--gold2) !important;
+}
+
+.nav-featured-arrow{
+  display:inline-block;
+  width:0;
+  overflow:hidden;
+  opacity:0;
+  margin-right:0;
+  color:var(--gold);
+  transform:translate(-6px,5px);
+  transition:
+    width .28s ease,
+    opacity .28s ease,
+    margin-right .28s ease,
+    transform .28s ease;
+}
+
+.nav-featured-link:hover .nav-featured-arrow{
+  width:15px;
+  opacity:1;
+  margin-right:7px;
+  transform:none;
+}
+
+.nav-cta{
+  padding:11px 19px;
+  font-size:13px;
+}
+
+@media(max-width:1180px){
+  .nav-links{
+    gap:21px;
+  }
+
+  .nav-links a{
+    font-size:11px;
+    letter-spacing:1.1px;
+  }
+}
+
+@media(max-width:980px){
+  .nav{
+    height:76px;
+    grid-template-columns:1fr auto;
+    padding:0 24px;
+  }
+
+  .nav.nav-scrolled{
+    height:66px;
+  }
+
+  .nav-links{
+    inset:76px 0 auto;
+    gap:24px;
+  }
+
+  .nav.nav-scrolled .nav-links{
+    inset:66px 0 auto;
+  }
+
+  .nav-links a{
+    font-size:14px;
+  }
+
+  .nav-featured-arrow{
+    width:15px;
+    opacity:1;
+    margin-right:7px;
+    transform:none;
+  }
+}
+
+@media(max-width:640px){
+  .nav{
+    height:70px;
+    padding:0 20px;
+  }
+
+  .nav.nav-scrolled{
+    height:62px;
+  }
+
+  .nav-links{
+    inset:70px 0 auto;
+  }
+
+  .nav.nav-scrolled .nav-links{
+    inset:62px 0 auto;
+  }
+
+  .nav .brand{
+    font-size:19px;
+  }
+}
