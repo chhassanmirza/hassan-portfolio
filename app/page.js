@@ -5,7 +5,8 @@ import Hero from '../components/Hero';
 import Results from '../components/Results';
 import FeaturedCaseStudy from '../components/FeaturedCaseStudy';
 import AccountOwnership from '../components/AccountOwnership';
-import { About, Services, Cases, Testimonials, Process, Tools, Offer, Contact } from '../components/Sections';
+import SelectedClientResults from '../components/SelectedClientResults';
+import { About, Services, Testimonials, Process, Tools, Offer, Contact } from '../components/Sections';
 
 export default function Home(){
   useEffect(()=>{
@@ -27,7 +28,7 @@ export default function Home(){
       <Services/>
       <FeaturedCaseStudy/>
       <AccountOwnership/>
-      <Cases/>
+      <SelectedClientResults/>
       <Testimonials/>
       <Process/>
       <Tools/>
