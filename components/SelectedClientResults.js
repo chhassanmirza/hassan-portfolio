@@ -130,10 +130,6 @@ export default function SelectedClientResults() {
                     <p>{result.summary}</p>
                   </div>
 
-                  <div className="selected-result-metrics">
-                    {result.metrics.map((metric) => <span key={metric}>{metric}</span>)}
-                  </div>
-
                   <div className="selected-result-action">
                     <span>{isOpen ? 'Close result' : 'View full result'}</span>
                     <b>{isOpen ? '×' : '+'}</b>
@@ -142,6 +138,18 @@ export default function SelectedClientResults() {
 
                 {isOpen && (
                   <div className="selected-result-expanded">
+                    <section className="selected-result-metrics-panel">
+                      <span>KEY METRICS</span>
+                      <div className="selected-result-expanded-metrics">
+                        {result.metrics.map((metric, metricIndex) => (
+                          <div key={metric}>
+                            <b>0{metricIndex + 1}</b>
+                            <strong>{metric}</strong>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+
                     <section>
                       <span>THE CHALLENGE</span>
                       <p>{result.challenge}</p>

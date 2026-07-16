@@ -1698,3 +1698,25 @@
     font-size:20px;
   }
 }
+
+/* Selected Client Results readability update */
+.selected-result-main{grid-template-columns:170px 1fr 190px;gap:42px;padding:38px 28px}
+.selected-result-meta>span{font-size:34px}
+.selected-result-meta small{font-size:10px;letter-spacing:1.65px}
+.selected-result-copy h3{margin-bottom:16px;font-size:clamp(38px,4vw,54px)}
+.selected-result-copy p{max-width:720px;font-size:15px;line-height:1.8}
+.selected-result-action{align-self:end;padding-bottom:4px;font-size:12px;letter-spacing:1.35px}
+.selected-result-action b{font-size:27px}
+.selected-result-expanded{grid-template-columns:1fr;padding:0 28px 36px}
+.selected-result-expanded section{padding:30px 0;border-right:0;border-top:1px solid rgba(255,255,255,.1)}
+.selected-result-expanded section>span{margin-bottom:20px;font-size:10px;letter-spacing:1.7px}
+.selected-result-expanded section>p{max-width:980px;font-size:15px;line-height:1.9}
+.selected-result-metrics-panel{padding-top:34px!important}
+.selected-result-expanded-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.08);border-left:1px solid rgba(255,255,255,.08)}
+.selected-result-expanded-metrics>div{min-height:132px;padding:22px;border-right:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.012)}
+.selected-result-expanded-metrics b{display:block;margin-bottom:18px;color:#66645e;font-size:9px;font-weight:400}
+.selected-result-expanded-metrics strong{display:block;color:var(--gold2);font-family:'Barlow Condensed';font-size:30px;line-height:1.1;text-transform:uppercase}
+.selected-result-detail-rows span{padding:14px 0;font-size:14px}
+.selected-result-detail-rows b{font-size:10px}
+@media(max-width:1050px){.selected-result-main{grid-template-columns:130px 1fr}.selected-result-action{grid-column:2}}
+@media(max-width:700px){.selected-result-main{grid-template-columns:1fr;gap:20px;padding:30px 0}.selected-result-copy h3{font-size:39px}.selected-result-copy p{font-size:14px}.selected-result-action{grid-column:auto;align-self:auto;padding-top:10px}.selected-result-expanded{padding:0 0 30px}.selected-result-expanded-metrics{grid-template-columns:1fr}.selected-result-expanded section>p{font-size:14px}.selected-result-detail-rows span{font-size:13px}}
