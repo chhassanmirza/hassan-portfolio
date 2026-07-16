@@ -8,7 +8,8 @@ import AccountOwnership from '../components/AccountOwnership';
 import SelectedClientResults from '../components/SelectedClientResults';
 import TestimonialsWall from '../components/TestimonialsWall';
 import WorkingProcess from '../components/WorkingProcess';
-import { About, Services, Tools, Offer, Contact } from '../components/Sections';
+import ToolsStack from '../components/ToolsStack';
+import { About, Services, Offer, Contact } from '../components/Sections';
 
 export default function Home(){
   useEffect(()=>{
@@ -33,7 +34,7 @@ export default function Home(){
       <SelectedClientResults/>
       <TestimonialsWall/>
       <WorkingProcess/>
-      <Tools/>
+      <ToolsStack/>
       <Offer/>
       <Contact/>
     </main>
