@@ -9,7 +9,8 @@ import SelectedClientResults from '../components/SelectedClientResults';
 import TestimonialsWall from '../components/TestimonialsWall';
 import WorkingProcess from '../components/WorkingProcess';
 import ToolsStack from '../components/ToolsStack';
-import { About, Services, Offer, Contact } from '../components/Sections';
+import FinalContact from '../components/FinalContact';
+import { About, Services } from '../components/Sections';
 
 export default function Home(){
   useEffect(()=>{
@@ -35,8 +36,7 @@ export default function Home(){
       <TestimonialsWall/>
       <WorkingProcess/>
       <ToolsStack/>
-      <Offer/>
-      <Contact/>
+      <FinalContact/>
     </main>
   );
 }
