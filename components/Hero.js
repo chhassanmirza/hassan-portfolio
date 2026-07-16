@@ -7,8 +7,8 @@ const roles = ['BRAND MANAGER', 'PPC STRATEGIST', 'GROWTH PARTNER'];
 const proofPoints = [
   ['$1M+', 'Managed Ad Sales'],
   ['5+', 'Years Experience'],
-  ['US · UK', 'Marketplace Experience'],
-  ['5.0', 'Upwork Rating'],
+  ['25+', 'Projects Completed'],
+  ['50+', 'Brands Managed'],
 ];
 
 export default function Hero() {
