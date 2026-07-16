@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const links = [
   ['Featured Case', 'featured-case', true],
-  ['Results', 'results', false],
+  ['Client Results', 'cases', false],
   ['Services', 'services', false],
   ['Experience', 'about', false],
   ['Testimonials', 'testimonials', false],
