@@ -6,7 +6,8 @@ import Results from '../components/Results';
 import FeaturedCaseStudy from '../components/FeaturedCaseStudy';
 import AccountOwnership from '../components/AccountOwnership';
 import SelectedClientResults from '../components/SelectedClientResults';
-import { About, Services, Testimonials, Process, Tools, Offer, Contact } from '../components/Sections';
+import TestimonialsWall from '../components/TestimonialsWall';
+import { About, Services, Process, Tools, Offer, Contact } from '../components/Sections';
 
 export default function Home(){
   useEffect(()=>{
@@ -29,7 +30,7 @@ export default function Home(){
       <FeaturedCaseStudy/>
       <AccountOwnership/>
       <SelectedClientResults/>
-      <Testimonials/>
+      <TestimonialsWall/>
       <Process/>
       <Tools/>
       <Offer/>
